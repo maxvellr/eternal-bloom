@@ -1,26 +1,26 @@
-import { useState } from 'react';
-import Button from '../ui/Button';
+import { useState } from "react";
+import Button from "../ui/Button";
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
-  const navItems = ['Artists', 'Gallery', 'Studio', 'FAQ'];
-  
+
+  const navItems = ["Artists", "Gallery", "Studio", "FAQ"];
+
   return (
     <header className="border-b border-zinc-800/80">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 mr-6">
           <div className="h-8 w-8 rounded-full bg-gradient-to-br from-zinc-100 to-zinc-500" />
-          <span className="text-sm tracking-[0.25em] uppercase text-zinc-400">
+          <span className="text-sm tracking-[0.15em] uppercase text-zinc-300 font-[Cardo] font-bold">
             Eternal Bloom
           </span>
         </div>
-        
+
         {/* Desktop Nav */}
         <nav className="hidden gap-6 text-sm text-zinc-400 md:flex">
-          {navItems.map(item => (
-            <button 
+          {navItems.map((item) => (
+            <button
               key={item}
               className="hover:text-zinc-100 transition-colors"
             >
@@ -28,33 +28,41 @@ function Header() {
             </button>
           ))}
         </nav>
-        
-        {/* CTA */}
-        <Button variant="small">
-          Book consultation
-        </Button>
-        
-        {/* Mobile Menu Toggle */}
-        <button 
-          className="md:hidden text-zinc-400"
+
+        {/* Desktop CTA - HIDDEN ON MOBILE */}
+        <div className="hidden md:block ml-6">
+          <Button variant="small">Book consultation</Button>
+        </div>
+
+        {/* Mobile Menu Toggle - ONLY ON MOBILE */}
+        <button
+          className="md:hidden text-zinc-400 text-xl p-2 border border-transparent hover:border-zinc-500 transition-colors focus:outline-none focus:border-zinc-500"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? '✕' : '☰'}
+          {mobileMenuOpen ? "✕" : "☰"}
         </button>
       </div>
-      
+
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-zinc-800/80 bg-zinc-950">
           <nav className="flex flex-col gap-4 px-6 py-4">
-            {navItems.map(item => (
-              <button 
+            {navItems.map((item) => (
+              <button
                 key={item}
                 className="text-left text-zinc-400 hover:text-zinc-100 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 {item}
               </button>
             ))}
+            {/* CTA in mobile menu */}
+            <div>
+              <Button variant="primary" className="w-full text-left">
+                Book Consultation
+              </Button>
+            </div>
           </nav>
         </div>
       )}

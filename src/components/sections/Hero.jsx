@@ -16,7 +16,7 @@ function Hero() {
               Private Tattoo Studio · Vancouver, WA
             </p>
             <h1 className="text-4xl font-semibold tracking-tight text-zinc-50 sm:text-5xl">
-              Darkwork, Gothic & Neo-Traditional tattoos curated for you.
+              Darkwork, Gothic & Neo-Traditional tattoos by artists who care.
             </h1>
             <p className="max-w-xl text-sm leading-relaxed text-zinc-400">
               Eternal Bloom is a private studio focused on custom, clean work and a calm,

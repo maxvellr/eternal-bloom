@@ -1,8 +1,14 @@
-/** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}",  // Make sure this catches all your files
+  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        cardo: ['Cardo', 'serif'],
+      },
+    },
   },
   plugins: [],
 };
