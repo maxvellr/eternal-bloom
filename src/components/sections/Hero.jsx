@@ -1,4 +1,5 @@
 import Button from '../ui/Button';
+import { Link } from "react-router-dom";
 
 function Hero() {
   const handleBooking = () => {
@@ -27,9 +28,9 @@ function Hero() {
               <button className="rounded-full bg-zinc-50 px-5 py-2 text-sm font-medium text-zinc-200 hover:bg-zinc-200 transition-colors">
                 Request a Booking
               </button>
-              <button className="rounded-full border border-zinc-700 px-5 py-2 text-sm text-zinc-200 hover:border-zinc-500 hover:bg-zinc-900 transition-colors">
+              <Link onClick={handleViewArtists} to="/artists" className="rounded-full header-button border border-zinc-700 px-5 py-2 text-sm !text-zinc-200 hover:border-zinc-500 hover:bg-zinc-900 transition-colors">
                 View Artists
-              </button>
+              </Link>
             </div>
 
             <div className="flex flex-wrap gap-6 pt-4 text-xs text-zinc-500">

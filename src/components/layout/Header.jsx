@@ -1,42 +1,48 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Button from "../ui/Button";
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navItems = ["Artists", "Gallery", "Studio", "FAQ"];
+  const navItems = [
+    { name: "Artists", path: "/artists" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Studio", path: "/studio" },
+    { name: "FAQ", path: "/faq" }
+  ];
 
   return (
     <header className="border-b border-zinc-800/80">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        {/* Logo */}
-        <div className="flex items-center gap-2 mr-6">
+        <Link to="/" className="flex items-center gap-2 mr-6">
           <div className="h-8 w-8 rounded-full bg-gradient-to-br from-zinc-100 to-zinc-500" />
           <span className="text-sm tracking-[0.15em] uppercase text-zinc-300 font-[Cardo] font-bold">
             Eternal Bloom
           </span>
-        </div>
+        </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden gap-6 text-sm text-zinc-400 md:flex">
+        <nav className="hidden gap-6 text-sm text-zinc-400 lg:flex items-center">
           {navItems.map((item) => (
-            <button
-              key={item}
-              className="hover:text-zinc-100 transition-colors"
+            <Link
+              key={item.name}
+              to={item.path}
+              className="hover:text-zinc-100 transition-colors header-button"
             >
-              {item}
-            </button>
+              {item.name}
+            </Link>
           ))}
         </nav>
 
         {/* Desktop CTA - HIDDEN ON MOBILE */}
-        <div className="hidden md:block ml-6">
+        <div className="hidden lg:block ml-6">
           <Button variant="small">Book consultation</Button>
         </div>
 
         {/* Mobile Menu Toggle - ONLY ON MOBILE */}
         <button
-          className="md:hidden text-zinc-400 text-xl p-2 border border-transparent hover:border-zinc-500 transition-colors focus:outline-none focus:border-zinc-500"
+          className="lg:hidden text-zinc-400 text-xl p-2 border border-transparent hover:border-zinc-500 transition-colors focus:outline-none focus:border-zinc-500"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -46,16 +52,17 @@ function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-zinc-800/80 bg-zinc-950">
+        <div className="lg:hidden border-t border-zinc-800/80 bg-zinc-950">
           <nav className="flex flex-col gap-4 px-6 py-4">
             {navItems.map((item) => (
-              <button
-                key={item}
+              <Link
+                key={item.name}
+                to={item.path}
                 className="text-left text-zinc-400 hover:text-zinc-100 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {item}
-              </button>
+                {item.name}
+              </Link>
             ))}
             {/* CTA in mobile menu */}
             <div>

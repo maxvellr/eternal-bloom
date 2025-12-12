@@ -1,12 +1,19 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
-import Hero from './components/sections/Hero';
+import Home from './pages/Home';
+import Artists from './pages/Artists';
 
 function App() {
   return (
-    <Layout>
-      <Hero />
-    </Layout>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/artists" element={<Artists />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
