@@ -58,7 +58,7 @@ function Header() {
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-left text-zinc-400 hover:text-zinc-100 transition-colors"
+                className="text-left text-zinc-400 hover:text-zinc-100 header-button transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}

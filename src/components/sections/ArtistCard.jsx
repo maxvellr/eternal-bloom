@@ -6,7 +6,6 @@ function ArtistCard({ artist }) {
       to={`/artists/${artist.id}`}
       className="group relative overflow-hidden rounded-2xl border border-zinc-800 bg-gradient-to-b from-zinc-900 to-black transition-all hover:border-zinc-700 flex flex-col"
     >
-    <div className="group relative overflow-hidden rounded-2xl border border-zinc-800 bg-gradient-to-b from-zinc-900 to-black transition-all hover:border-zinc-700 flex flex-col">
       <div className="aspect-[3/4] overflow-hidden bg-zinc-900">
         <img 
           src={artist.image} 
@@ -62,7 +61,6 @@ function ArtistCard({ artist }) {
           Book with {artist.name.split(' ')[0]}
         </button>
       </div>
-    </div>
     </Link>
   );
 } 

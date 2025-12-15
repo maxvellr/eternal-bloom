@@ -1,5 +1,6 @@
 import Button from '../ui/Button';
 import { Link } from "react-router-dom";
+import backrooms from '../../../assets/backrooms.jpg';
 
 function Hero() {
   const handleBooking = () => {
@@ -44,10 +45,9 @@ function Hero() {
               </div>
             </div>
           </div>
-
           <div className="mt-10 flex-1 md:mt-0">
             <div className="relative mx-auto aspect-[4/5] max-w-sm overflow-hidden rounded-3xl border border-zinc-800 bg-gradient-to-b from-zinc-900 to-black">
-              <div className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top,_#ffffff22,_transparent_55%)]" />
+              <img src={backrooms} className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top,_#ffffff22,_transparent_55%)]" />
               <div className="relative flex h-full flex-col justify-between p-6">
                 <div className="space-y-2">
                   <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
