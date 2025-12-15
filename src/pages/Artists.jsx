@@ -1,22 +1,20 @@
-import { useState } from 'react';
 import stars from '../../assets/stars.jpg';
-import lexie from '../../assets/lexie.jpg';
+import spiritfox from '../../assets/spiritfox.jpg';
 import ArtistCard from '../components/sections/ArtistCard';
 
-// Artist data
 const artists = [
   {
-    id: 1,
-    name: "Lexie",
+    id: 'spiritfox',
+    name: "Spiritfox",
     specialty: "Illustrative Darkwork & Gothic",
-    bio: "Specializing in intricate darkwork, gothic, and blackwork, Lexie prides herself on bringing her clients' visions to life and she's super hot.",
-    image: lexie,
+    bio: "Specializing in intricate darkwork, gothic, and blackwork, she prides herself on bringing her clients' visions to life and she's super hot.",
+    image: spiritfox,
     styles: ["Darkwork", "Blackwork", "Gothic"],
     availability: "Booking 2-3 months out",
     instagram: "@spiritfoxtattoo"
   },
   {
-    id: 2,
+    id: 'rainy',
     name: "Rainy",
     specialty: "Blackwork, Neo-Traditional, Black & Gray",
     bio: "Here's some sample bio toext for Rainy. She dressed as a clown in high school and has been tattooing ever since.",
@@ -26,7 +24,7 @@ const artists = [
     instagram: "@rainclowntattoo"
   },
   {
-    id: 3,
+    id: 'virginia',
     name: "Virginia",
     specialty: "Japanese Neo-Traditional, Black & Gray",
     bio: "Virginia's sample bio. Here's some great content about her work and style. We're excited to have her.",
@@ -41,7 +39,6 @@ const artists = [
 function Artists() {
   return (
     <div className="min-h-screen bg-black text-zinc-100">
-      {/* Hero Section */}
       <section className="border-b border-zinc-800/80 bg-gradient-to-b from-zinc-950 to-black">
         <div className="mx-auto max-w-6xl px-6 py-16 text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-zinc-500">
@@ -60,7 +57,6 @@ function Artists() {
         </div>
       </section>
 
-      {/* Artists Grid */}
       <section className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {artists.map(artist => (
