@@ -1,56 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
-
-const artistsData = {
-  spiritfox: {
-    id: "spiritfox",
-    name: "Spiritfox",
-    specialty: "Dark Illustrative & Blackwork",
-    bio: "Specializing in intricate darkwork, gothic, and blackwork, she prides herself on bringing her clients' visions to life and providing them with the best experience possible. She creates bold, detailed pieces that tell a story.",
-    image: "/images/spiritfox/spiritfox.jpg",
-    styles: ["Darkwork", "Blackwork", "Gothic"],
-    availability: "Booking 2-3 months out",
-    instagram: "@spiritfoxtattoo",
-    email: "spiritfox@eternalbloom.com",
-    portfolio: [],
-  },
-  rainy: {
-    id: "rainy",
-    name: "Rainy",
-    specialty: "Blackwork, Neo-Traditional & Black & Gray",
-    bio: "Here's some sample bio text for Rainy. She dressed as a clown in high school and has been tattooing ever since. Known for bold neo-traditional pieces with a dark twist.",
-    styles: ["Neo-Traditional", "Black & Gray"],
-    availability: "Currently booking",
-    instagram: "@rainclowntattoo",
-    email: "rainy@eternalbloom.com",
-    portfolio: [],
-  },
-  niemo: {
-    id: "niemo",
-    name: "Niemo",
-    specialty: "Japanese Neo-Traditional & Black & Gray",
-    bio: "Niemo's sample bio. Here's some great content about her work and style. Specializes in neo-traditional work with Japanese influences.",
-    image: "/images/niemo/niemo.jpg",
-    styles: ["Fine Line", "Ornamental", "Geometric"],
-    availability: "Waitlist open",
-    instagram: "@niemo_tattoo",
-    email: "niemo@eternalbloom.com",
-    portfolio: [
-      "/images/niemo/1.jpg",
-      "/images/niemo/2.JPG",
-      "/images/niemo/3.jpg",
-      "/images/niemo/4.jpg",
-      "/images/niemo/5.jpg",
-      "/images/niemo/6.jpg",
-      "/images/niemo/7.jpg",
-      "/images/niemo/8.jpg",
-      "/images/niemo/9.jpg",
-      "/images/niemo/10.jpg",
-      "/images/niemo/11.jpg",
-      "/images/niemo/12.jpg",
-    ],
-  },
-};
+import { artistsData } from "../data/ArtistData";
 
 function ArtistDetails() {
   const { artistId } = useParams();
