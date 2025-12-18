@@ -1,5 +1,6 @@
-import stars from '../../assets/stars.jpg';
-import spiritfox from '../../assets/spiritfox.jpg';
+
+import spiritfox from '../../public/images/spiritfox/spiritfox.jpg';
+import niemo from '../../public/images/niemo/niemo.jpg';
 import ArtistCard from '../components/sections/ArtistCard';
 
 const artists = [
@@ -18,17 +19,16 @@ const artists = [
     name: "Rainy",
     specialty: "Blackwork, Neo-Traditional, Black & Gray",
     bio: "Here's some sample bio toext for Rainy. She dressed as a clown in high school and has been tattooing ever since.",
-    image: stars,
     styles: ["Neo-Traditional", "Blackwork"],
     availability: "Currently booking",
     instagram: "@rainclowntattoo"
   },
   {
-    id: 'virginia',
-    name: "Virginia",
+    id: 'niemo',
+    name: "Niemo",
     specialty: "Japanese Neo-Traditional, Black & Gray",
-    bio: "Virginia's sample bio. Here's some great content about her work and style. We're excited to have her.",
-    image: stars,
+    bio: "niemo's sample bio. Here's some great content about her work and style. We're excited to have her.",
+    image: niemo,
     styles: ["Japanese Neo-Traditional", "Black & Gray"],
     availability: "Currently Booking",
     instagram: "@niemo_tattoo"

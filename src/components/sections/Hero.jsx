@@ -1,6 +1,6 @@
 import Button from '../ui/Button';
 import { Link } from "react-router-dom";
-import backrooms from '../../../assets/backrooms.jpg';
+import bloom from '../../../public/images/site/bloom.jpg';
 
 function Hero() {
   const handleBooking = () => {
@@ -17,7 +17,7 @@ function Hero() {
             <p className="text-xs uppercase tracking-[0.3em] text-zinc-500">
               Private Tattoo Studio · Vancouver, WA
             </p>
-            <h1 className="text-4xl font-semibold tracking-tight text-zinc-50 sm:text-5xl">
+            <h1 className="text-4xl font-semibold tracking-tight font-[ebGaramond] text-zinc-50 sm:text-5xl">
               Darkwork, Gothic & Neo-Traditional tattoos by artists who care.
             </h1>
             <p className="max-w-xl text-sm leading-relaxed text-zinc-400">
@@ -47,7 +47,7 @@ function Hero() {
           </div>
           <div className="mt-10 flex-1 md:mt-0">
             <div className="relative mx-auto aspect-[4/5] max-w-sm overflow-hidden rounded-3xl border border-zinc-800 bg-gradient-to-b from-zinc-900 to-black">
-              <img src={backrooms} className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top,_#ffffff22,_transparent_55%)]" />
+              <img src={bloom} className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top,_#ffffff22,_transparent_55%)]" />
               <div className="relative flex h-full flex-col justify-between p-6">
                 <div className="space-y-2">
                   <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">

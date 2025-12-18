@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         cardo: ['Cardo', 'serif'],
+        ebGaramond: ['EB Garamond', 'serif'],
       },
     },
   },

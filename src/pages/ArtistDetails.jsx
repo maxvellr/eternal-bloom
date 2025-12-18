@@ -1,63 +1,55 @@
-import { useParams, Link } from 'react-router-dom';
-import { useState } from 'react';
-import spiritfox from '../../assets/spiritfox.jpg';
-import stars from '../../assets/stars.jpg';
-import egg from '../../assets/egg.jpg';
+import { useParams, Link } from "react-router-dom";
+import { useState } from "react";
 
 const artistsData = {
-  'spiritfox': {
-    id: 'spiritfox',
+  spiritfox: {
+    id: "spiritfox",
     name: "Spiritfox",
     specialty: "Dark Illustrative & Blackwork",
     bio: "Specializing in intricate darkwork, gothic, and blackwork, she prides herself on bringing her clients' visions to life and providing them with the best experience possible. She creates bold, detailed pieces that tell a story.",
-    image: spiritfox,
+    image: "/images/spiritfox/spiritfox.jpg",
     styles: ["Darkwork", "Blackwork", "Gothic"],
     availability: "Booking 2-3 months out",
     instagram: "@spiritfoxtattoo",
     email: "spiritfox@eternalbloom.com",
-    portfolio: [
-        egg,
-        egg,
-        egg,
-        egg,
-        egg,
-        egg
-    ]
+    portfolio: [],
   },
-  'rainy': {
-    id: 'rainy',
+  rainy: {
+    id: "rainy",
     name: "Rainy",
     specialty: "Blackwork, Neo-Traditional & Black & Gray",
     bio: "Here's some sample bio text for Rainy. She dressed as a clown in high school and has been tattooing ever since. Known for bold neo-traditional pieces with a dark twist.",
-    image: stars,
     styles: ["Neo-Traditional", "Black & Gray"],
     availability: "Currently booking",
     instagram: "@rainclowntattoo",
     email: "rainy@eternalbloom.com",
-    portfolio: [
-      egg,
-      egg,
-      egg
-    ]
+    portfolio: [],
   },
-  'virginia': {
-    id: 'virginia',
-    name: "Virginia",
+  niemo: {
+    id: "niemo",
+    name: "Niemo",
     specialty: "Japanese Neo-Traditional & Black & Gray",
-    bio: "Virginia's sample bio. Here's some great content about her work and style. Specializes in neo-traditional work with Japanese influences.",
-    image: stars,
+    bio: "Niemo's sample bio. Here's some great content about her work and style. Specializes in neo-traditional work with Japanese influences.",
+    image: "/images/niemo/niemo.jpg",
     styles: ["Fine Line", "Ornamental", "Geometric"],
     availability: "Waitlist open",
     instagram: "@niemo_tattoo",
-    email: "virginia@eternalbloom.com",
+    email: "niemo@eternalbloom.com",
     portfolio: [
-      egg,
-      egg,
-      egg,
-      egg,
-      egg
-    ]
-  }
+      "/images/niemo/1.jpg",
+      "/images/niemo/2.JPG",
+      "/images/niemo/3.jpg",
+      "/images/niemo/4.jpg",
+      "/images/niemo/5.jpg",
+      "/images/niemo/6.jpg",
+      "/images/niemo/7.jpg",
+      "/images/niemo/8.jpg",
+      "/images/niemo/9.jpg",
+      "/images/niemo/10.jpg",
+      "/images/niemo/11.jpg",
+      "/images/niemo/12.jpg",
+    ],
+  },
 };
 
 function ArtistDetails() {
@@ -86,8 +78,8 @@ function ArtistDetails() {
           <div className="grid gap-12 md:grid-cols-2 items-start">
             {/* Left - Artist Photo */}
             <div className="aspect-[3/4] overflow-hidden rounded-2xl border border-zinc-800">
-              <img 
-                src={artist.image} 
+              <img
+                src={artist.image}
                 alt={artist.name}
                 className="h-full w-full object-cover"
               />
@@ -112,8 +104,8 @@ function ArtistDetails() {
                   Specialties
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {artist.styles.map(style => (
-                    <span 
+                  {artist.styles.map((style) => (
+                    <span
                       key={style}
                       className="rounded-full border border-zinc-700 px-4 py-1.5 text-sm text-zinc-300"
                     >
@@ -131,8 +123,11 @@ function ArtistDetails() {
                 </div>
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-zinc-500">Instagram</span>
-                  <a 
-                    href={`https://instagram.com/${artist.instagram.replace('@', '')}`}
+                  <a
+                    href={`https://instagram.com/${artist.instagram.replace(
+                      "@",
+                      ""
+                    )}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zinc-200 hover:text-zinc-50 transition-colors"
@@ -142,7 +137,7 @@ function ArtistDetails() {
                 </div>
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-zinc-500">Email</span>
-                  <a 
+                  <a
                     href={`mailto:${artist.email}`}
                     className="text-zinc-200 hover:text-zinc-50 transition-colors"
                   >
@@ -167,13 +162,13 @@ function ArtistDetails() {
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {artist.portfolio.map((img, index) => (
-            <div 
+            <div
               key={index}
               className="group relative aspect-square overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900 cursor-pointer"
               onClick={() => setSelectedImage(img)}
             >
-              <img 
-                src={img} 
+              <img
+                src={img}
                 alt={`${artist.name} portfolio ${index + 1}`}
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -185,18 +180,18 @@ function ArtistDetails() {
 
       {/* Image Lightbox Modal */}
       {selectedImage && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
           onClick={() => setSelectedImage(null)}
         >
-          <button 
+          <button
             className="absolute top-6 right-6 text-4xl text-zinc-400 hover:text-zinc-100"
             onClick={() => setSelectedImage(null)}
           >
             ×
           </button>
-          <img 
-            src={selectedImage} 
+          <img
+            src={selectedImage}
             alt="Portfolio detail"
             className="max-h-[90vh] max-w-full rounded-lg"
             onClick={(e) => e.stopPropagation()}
