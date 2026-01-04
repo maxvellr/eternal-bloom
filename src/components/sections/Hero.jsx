@@ -1,82 +1,70 @@
 import Button from '../ui/Button';
 import { Link } from "react-router-dom";
-import bloom from '../../../public/images/site/bloom.jpg';
+import { artistsData } from '../../data/ArtistData';
 
 function Hero() {
-  const handleBooking = () => {
-    console.log('Opening booking form...');
-  };
   
-  const handleViewArtists = () => {
-    console.log('Navigating to artists...');
-  };
+  const artists = Object.values(artistsData);
   
   return (
-        <section className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16 md:flex-row md:items-center">
-          <div className="flex-1 space-y-6">
-            <p className="text-xs uppercase tracking-[0.3em] text-zinc-500">
-              Private Tattoo Studio · Vancouver, WA
-            </p>
-            <h1 className="text-4xl font-semibold tracking-tight font-[ebGaramond] text-zinc-50 sm:text-5xl">
-              Darkwork, Gothic & Neo-Traditional tattoos by artists who care.
-            </h1>
-            <p className="max-w-xl text-sm leading-relaxed text-zinc-400">
-              Eternal Bloom is a private studio focused on custom, clean work and a calm,
-              inclusive experience from first consult to final session.
-            </p>
+    <>
+      {/* Full-width Hero with Background */}
+      <section className="relative border-b border-zinc-800/80 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.pexels.com/photos/1102912/pexels-photo-1102912.jpeg" 
+            alt="Eternal Bloom Studio"
+            className="h-full w-full object-cover opacity-20" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/40 to-black" />
+        </div>
 
-            <div className="flex flex-wrap gap-3 pt-2">
-              <button className="rounded-full bg-zinc-50 px-5 py-2 text-sm font-medium text-zinc-200 hover:bg-zinc-200 transition-colors">
-                Request a Booking
-              </button>
-              <Link onClick={handleViewArtists} to="/artists" className="rounded-full header-button border border-zinc-700 px-5 py-2 text-sm !text-zinc-200 hover:border-zinc-500 hover:bg-zinc-900 transition-colors">
+        {/* Content */}
+        <div className="relative mx-auto max-w-4xl px-6 py-32 text-center">
+          <p className="text-xs uppercase tracking-[0.3em] font-[ebGaramond] text-zinc-400">
+            Private Tattoo Studio · Vancouver, WA
+          </p>          
+          <h1 className="mt-6 text-5xl font-semibold tracking-tight text-zinc-50 sm:text-6xl lg:text-7xl">
+            Darkwork, Gothic & Neo-Traditional tattoos{' '}
+            <span className='font-[ebGaramond] italic text-zinc-300'>by artists who care.</span>
+          </h1>
+          
+          <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-zinc-300">
+            Eternal Bloom is a private studio focused on custom, clean work and a calm,
+            inclusive experience from first consult to final session.
+          </p>
+
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <Link variant="primary" to="/booking" className="rounded-full bg-zinc-50 px-6 text-sm font-medium header-button transition-colors hover:bg-zinc-200">
+            Book Consultation
+          </Link>
+            <Link to="/artists">
+              <Button variant="secondary">
                 View Artists
-              </Link>
-            </div>
+              </Button>
+            </Link>
+          </div>
 
-            <div className="flex flex-wrap gap-6 pt-4 text-xs text-zinc-500">
-              <div>
-                <p className="font-medium text-zinc-300">Styles</p>
-                <p>Illustrative Black & Gray · Neo-Traditional</p>
-              </div>
-              <div>
-                <p className="font-medium text-zinc-300">Booking</p>
-                <p>Currently accepting new clients</p>
-              </div>
+          {/* Quick Info */}
+          <div className="mt-16 flex flex-wrap justify-center gap-8 text-sm">
+            <div className="text-center">
+              <p className="font-medium text-zinc-300">Styles</p>
+              <p className="text-zinc-400">Black & Gray · Neo-Traditional</p>
+            </div>
+            <div className="text-center">
+              <p className="font-medium text-zinc-300">Booking</p>
+              <p className="text-zinc-400">Accepting new clients</p>
+            </div>
+            <div className="text-center">
+              <p className="font-medium text-zinc-300">Location</p>
+              <p className="text-zinc-400">Vancouver, WA</p>
             </div>
           </div>
-          <div className="mt-10 flex-1 md:mt-0">
-            <div className="relative mx-auto aspect-[4/5] max-w-sm overflow-hidden rounded-3xl border border-zinc-800 bg-gradient-to-b from-zinc-900 to-black">
-              <img src={bloom} className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top,_#ffffff22,_transparent_55%)]" />
-              <div className="relative flex h-full flex-col justify-between p-6">
-                <div className="space-y-2">
-                  <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-                    Studio Atmosphere
-                  </p>
-                  <p className="text-sm text-zinc-300">
-                    Soft lighting, dark decor, and private sessions so you can
-                    enjoy your experience.
-                  </p>
-                </div>
-                <div className="space-y-4 text-xs text-zinc-400">
-                  <div className="flex items-center justify-between border-t border-zinc-800/80 pt-4">
-                    <span>Single-use needles & sterile setup</span>
-                    <span className="rounded-full border border-emerald-500/40 px-2 py-0.5 text-[0.65rem] text-emerald-300">
-                      Health-first
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between border-t border-zinc-800/80 pt-4">
-                    <span>Detailed aftercare guidance</span>
-                    <span className="text-zinc-500">Digital</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <p className="mt-4 text-center text-[0.7rem] uppercase tracking-[0.25em] text-zinc-500">
-              Appointment only
-            </p>
-          </div>
-        </section>
+        </div>
+      </section>
+
+    </>
   );
 }
 

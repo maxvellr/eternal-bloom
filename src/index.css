@@ -6,6 +6,7 @@
 
 .transition-colors:hover{
   border-color: var(--color-zinc-100);
+  color: var(--color-zinc-100);
 }
 
 a {

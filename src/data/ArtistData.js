@@ -26,7 +26,15 @@ export const artistsData = {
     id: "niemo",
     name: "Niemo",
     specialty: "Hello my name is Virginia, also known as Niemo. ",
-    bio: "I’ve been tattooing since 2015 and I’ve been drawing since before I could speak. I grew up in a multicultural household with a French dad and a Chinese mom. Drawing has always been a form of communication then became a passion of mine. I came back to the US and settled in LA after I graduated high school in China I wanted to pursue an art career wasn’t really sure what to do. As a 17 year old who got accepted at Otis only to drop out a year later because I couldn’t afford my tuition. I’ve been dreaming of becoming a tattooer since I was 9, so I packed all my drawings and found a shop in West Hollywood and started my apprenticeship. I’ve been heavily influenced by art in the renaissance era and traditional Japanese/Chinese paintings my whole life and I’ve been trying to incorporate that into my work ever since I’ve found my voice in tattooing. I love tattooing lady faces, florals, vases, animals and anything with a romantic touch. But I also enjoy doing a lot of Asian folklore, creepy gruesome creatures that are what nightmares are made of. I also focus on flow as I think tattoos should complement our anatomy. If you feel like I’m a good fit for your next tattoo project feel free to email me and book a consultation/appointment.  ",
+    bio: `I've been tattooing since 2015 and I've been drawing since before I could speak. I grew up in a multicultural household with a French dad and a Chinese mom. Drawing has always been a form of communication then became a passion of mine.
+
+I came back to the US and settled in LA after I graduated high school in China. I wanted to pursue an art career but wasn't really sure what to do. As a 17 year old who got accepted at Otis only to drop out a year later because I couldn't afford my tuition, I've been dreaming of becoming a tattooer since I was 9. So I packed all my drawings and found a shop in West Hollywood and started my apprenticeship.
+
+I've been heavily influenced by art in the Renaissance era and traditional Japanese/Chinese paintings my whole life, and I've been trying to incorporate that into my work ever since I've found my voice in tattooing.
+
+I love tattooing lady faces, florals, vases, animals and anything with a romantic touch. But I also enjoy doing a lot of Asian folklore, creepy gruesome creatures that are what nightmares are made of. I also focus on flow as I think tattoos should complement our anatomy.
+
+If you feel like I'm a good fit for your next tattoo project feel free to email me and book a consultation/appointment.`,
     image: "/images/niemo/niemo.jpg",
     styles: ["Art Nouveau", "Neo-Traditional", "Neo-Japanese"],
     availability: "Waitlist open",

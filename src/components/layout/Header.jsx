@@ -37,7 +37,9 @@ function Header() {
 
         {/* Desktop CTA - HIDDEN ON MOBILE */}
         <div className="hidden lg:block ml-6">
-          <Button variant="small">Book consultation</Button>
+          <Link variant="primary" to="/booking" className="hover:text-zinc-100 transition-colors header-button">
+                Book Consultation
+          </Link>
         </div>
 
         {/* Mobile Menu Toggle - ONLY ON MOBILE */}
@@ -65,10 +67,10 @@ function Header() {
               </Link>
             ))}
             {/* CTA in mobile menu */}
-            <div>
-              <Button variant="primary" className="w-full text-left">
+            <div className="text-left text-zinc-400 hover:text-zinc-100 header-button transition-colors">
+              <Link variant="primary" to="/booking">
                 Book Consultation
-              </Button>
+              </Link>
             </div>
           </nav>
         </div>
