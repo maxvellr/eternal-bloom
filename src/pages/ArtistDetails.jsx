@@ -46,9 +46,12 @@ function ArtistDetails() {
 
               {/* Bio */}
               <div className="text-sm leading-relaxed text-zinc-300 space-y-4 text-left">
-                {artist.bio.split("\n\n").map((paragraph, i) => (
-                  <p key={i}>{paragraph}</p>
-                ))}
+                {artist.bio
+                  .trim()
+                  .split(/\n\s*\n/)
+                  .map((p, i) => (
+                    <p key={i}>{p.trim()}</p>
+                  ))}
               </div>
 
               {/* Styles */}
@@ -88,27 +91,17 @@ function ArtistDetails() {
                     {artist.instagram}
                   </a>
                 </div>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-zinc-500">Email</span>
-                  <a
-                    href={`mailto:${artist.email}`}
-                    className="text-zinc-200 hover:text-zinc-50 transition-colors"
-                  >
-                    {artist.email}
-                  </a>
-                </div>
               </div>
 
               {/* CTA Button */}
               <div>
-              <Link
-  to={`/booking?artist=${encodeURIComponent(artist.name)}`}
-  className="block header-button w-full text-center rounded-full bg-zinc-500 py-3 text-sm font-medium text-zinc-500 hover:text-zinc-200 transition-colors hover:bg-zinc-200"
->
-  Book with {artist.name}
-</Link>
-</div>
-
+                <Link
+                  to={`/booking?artist=${encodeURIComponent(artist.name)}`}
+                  className="block header-button w-full text-center rounded-full bg-zinc-500 py-3 text-sm font-medium text-zinc-500 hover:text-zinc-200 transition-colors hover:bg-zinc-200"
+                >
+                  Book with {artist.name}
+                </Link>
+              </div>
             </div>
           </div>
         </div>
