@@ -13,7 +13,7 @@ function Hero() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/images/site/lounge.jpg" 
+            src="/eternal-bloom/images/site/lounge.jpg" 
             alt="Eternal Bloom Studio"
             className="h-full w-full object-cover opacity-40" 
           />
