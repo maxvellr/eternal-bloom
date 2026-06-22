@@ -16,7 +16,7 @@ export default function BookingRequest() {
   return (
     <div className="min-h-screen bg-black text-zinc-100">
       <section className="border-b border-zinc-800/80 bg-gradient-to-b from-black to-zinc-950">
-        <div className="mx-auto w-full max-w-6xl px-48 py-24">
+        <div className="mx-auto w-full max-w-2xl px-6 py-24">
           <h1 className="text-3xl font-semibold font-[ebGaramond] mb-4">
             Request a Tattoo Appointment
           </h1>

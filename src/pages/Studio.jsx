@@ -23,7 +23,7 @@ export default function Studio() {
           <h1 className="text-4xl sm:text-5xl font-semibold font-[ebGaramond] text-zinc-50 mb-6">
             A calm, private space for intentional work
           </h1>
-          <p className="mx-auto max-w-2xl text-zinc-400 text-sm leading-relaxed">
+          <p className="mx-auto max-w-6xl text-zinc-400 text-sm leading-relaxed">
             Eternal Bloom is a private, appointment-only studio designed to feel
             quiet, safe, and focused.
           </p>

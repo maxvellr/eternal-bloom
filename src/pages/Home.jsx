@@ -6,7 +6,7 @@ function Home() {
   const artists = Object.values(artistsData);
   return( <><Hero />
   {/* About Studio Section */}
-      <section className="border-b border-zinc-800/80 bg-gradient-to-b from-black to-zinc-950">
+      {/* <section className="border-b border-zinc-800/80 bg-gradient-to-b from-black to-zinc-950">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[0.3em] text-zinc-500 mb-4">
@@ -18,7 +18,7 @@ function Home() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-3">
-            {/* Feature 1 */}
+            
             <div className="rounded-2xl border border-zinc-800 bg-gradient-to-b from-zinc-900/50 to-black/50 p-8 text-center">
               <div className="mx-auto mb-4 h-12 w-12 rounded-full bg-emerald-500/10 flex items-center justify-center">
                 <div className="h-6 w-6 rounded-full bg-emerald-500/20 flex items-center justify-center">
@@ -31,7 +31,7 @@ function Home() {
               </p>
             </div>
 
-            {/* Feature 2 */}
+          
             <div className="rounded-2xl border border-zinc-800 bg-gradient-to-b from-zinc-900/50 to-black/50 p-8 text-center">
               <div className="mx-auto mb-4 h-12 w-12 rounded-full bg-zinc-500/10 flex items-center justify-center">
                 <div className="h-6 w-6 rounded-full bg-zinc-500/20 flex items-center justify-center">
@@ -44,7 +44,7 @@ function Home() {
               </p>
             </div>
 
-            {/* Feature 3 */}
+            
             <div className="rounded-2xl border border-zinc-800 bg-gradient-to-b from-zinc-900/50 to-black/50 p-8 text-center">
               <div className="mx-auto mb-4 h-12 w-12 rounded-full bg-zinc-500/10 flex items-center justify-center">
                 <div className="h-6 w-6 rounded-full bg-zinc-500/20 flex items-center justify-center">
@@ -58,18 +58,18 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Meet Our Artists Section */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
+      <section className="mx-auto max-w-6xl px-6 pt-12 pb-16">
         <div className="text-center mb-12">
-          <p className="text-xs uppercase tracking-[0.3em] text-zinc-500 mb-4">
+          {/* <p className="text-xs uppercase tracking-[0.3em] text-zinc-500 mb-4">
             Our Artists
-          </p>
+          </p> */}
           <h2 className="text-3xl font-semibold text-zinc-50 font-[ebGaramond] sm:text-4xl mb-4">
-            Three unique voices in tattooing
+            Our Artists
           </h2>
-          <p className="text-zinc-400 text-sm max-w-2xl mx-auto">
+          <p className="text-zinc-400 text-sm max-w-6xl mx-auto">
             Each artist brings their own style and expertise. Browse their work and find the perfect match for your vision.
           </p>
         </div>

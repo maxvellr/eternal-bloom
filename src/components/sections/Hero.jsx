@@ -21,7 +21,7 @@ function Hero() {
         </div>
 
         {/* Content */}
-        <div className="relative mx-auto max-w-4xl px-6 py-32 text-center">
+        <div className="relative mx-auto max-w-6xl px-6 py-32 text-center">
           <p className="text-xs uppercase tracking-[0.3em] font-[ebGaramond] text-zinc-400">
             Private Tattoo Studio · Vancouver, WA
           </p>          
@@ -30,7 +30,7 @@ function Hero() {
             <span className='font-[ebGaramond] italic text-zinc-300'>by artists who care.</span>
           </h1>
           
-          <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-zinc-300">
+          <p className="mx-auto mt-8 max-w-6xl text-base leading-relaxed text-zinc-300">
             Eternal Bloom is a private studio focused on custom, clean work and a calm,
             inclusive experience from first consult to final session.
           </p>

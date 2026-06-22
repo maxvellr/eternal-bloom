@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import Artists from './pages/Artists';
 import ArtistDetails from './pages/ArtistDetails';
 import BookingRequest from "./pages/BookingForm";
+import Faq from "./pages/Faq";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Studio from "./pages/Studio";
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
           <Route path="/artists" element={<Artists />} />
           <Route path="/artists/:artistId" element={<ArtistDetails />} />
           <Route path="/booking" element={<BookingRequest />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/studio" element={<Studio />} />
         </Routes>
       </Layout>
