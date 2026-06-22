@@ -14,13 +14,13 @@ function App() {
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/artists" element={<Artists />} />
-          <Route path="/artists/:artistId" element={<ArtistDetails />} />
-          <Route path="/booking" element={<BookingRequest />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/studio" element={<Studio />} />
+          <Route path="/eternal-bloom" element={<Home />} />
+          <Route path="/eternal-bloom/artists" element={<Artists />} />
+          <Route path="/eternal-bloom/artists/:artistId" element={<ArtistDetails />} />
+          <Route path="/eternal-bloom/booking" element={<BookingRequest />} />
+          <Route path="/eternal-bloom/faq" element={<Faq />} />
+          <Route path="/eternal-bloom/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/eternal-bloom/studio" element={<Studio />} />
         </Routes>
       </Layout>
     </BrowserRouter>
