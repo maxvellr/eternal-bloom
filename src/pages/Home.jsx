@@ -79,7 +79,7 @@ function Home() {
           {artists.map((artist) => (
             <Link 
               key={artist.id}
-              to={`/eternal-bloom/artists/${artist.id}`}
+              to={`/artists/${artist.id}`}
               className="group relative overflow-hidden rounded-2xl border border-zinc-800 bg-gradient-to-b from-zinc-900 to-black transition-all hover:border-zinc-700"
             >
               {/* Diagonal Split Images */}

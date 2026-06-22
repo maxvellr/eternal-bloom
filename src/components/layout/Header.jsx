@@ -6,16 +6,16 @@ function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Artists", path: "/eternal-bloom/artists" },
+    { name: "Artists", path: "/artists" },
     // { name: "Studio", path: "/eternal-bloom/studio" },
-    { name: "FAQ", path: "/eternal-bloom/faq" },
-    { name: "Privacy Policy", path: "/eternal-bloom/privacy-policy" }
+    { name: "FAQ", path: "/faq" },
+    { name: "Privacy Policy", path: "/privacy-policy" }
   ];
 
   return (
     <header className="border-b border-zinc-800/80">
       <div className="mx-auto w-full flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link to="/eternal-bloom" className="flex items-center gap-2 mr-6">
+        <Link to="/" className="flex items-center gap-2 mr-6">
           {/* <div className="h-8 w-8 rounded-full bg-gradient-to-br from-zinc-100 to-zinc-500">          </div> */}
           <span className="text-sm tracking-[0.15em] uppercase text-zinc-300 font-[ebGaramond] font-bold">
             Eternal Bloom
@@ -37,7 +37,7 @@ function Header() {
 
         {/* Desktop CTA - HIDDEN ON MOBILE */}
         <div className="hidden lg:block ml-6">
-          <Link variant="primary" to="/eternal-bloom/booking" className="hover:text-zinc-100 transition-colors header-button">
+          <Link variant="primary" to="/booking" className="hover:text-zinc-100 transition-colors header-button">
                 Book Consultation
           </Link>
         </div>

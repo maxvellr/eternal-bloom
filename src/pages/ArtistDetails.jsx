@@ -14,7 +14,7 @@ function ArtistDetails() {
       <div className="min-h-screen bg-black text-zinc-100 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-semibold mb-4">Artist not found</h1>
-          <Link to="/eternal-bloom/artists" className="text-zinc-400 hover:text-zinc-200">
+          <Link to="/artists" className="text-zinc-400 hover:text-zinc-200">
             ← Back to Artists
           </Link>
         </div>
@@ -101,7 +101,7 @@ function ArtistDetails() {
                   to={
                     isExternal(artist.link)
                       ? artist.link
-                      : `/eternal-bloom/booking?artist=${encodeURIComponent(artist.name)}`
+                      : `/booking?artist=${encodeURIComponent(artist.name)}`
                   }
                   {...(isExternal(artist.link)
                     ? { target: "_blank", rel: "noopener noreferrer" }
