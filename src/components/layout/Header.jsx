@@ -7,7 +7,7 @@ function Header() {
 
   const navItems = [
     { name: "Artists", path: "/artists" },
-    { name: "Studio", path: "/studio" },
+    // { name: "Studio", path: "/studio" },
     { name: "FAQ", path: "/faq" },
     { name: "Privacy Policy", path: "/privacy-policy" }
   ];
@@ -16,7 +16,7 @@ function Header() {
     <header className="border-b border-zinc-800/80">
       <div className="mx-auto w-full flex max-w-6xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-2 mr-6">
-          <div className="h-8 w-8 rounded-full bg-gradient-to-br from-zinc-100 to-zinc-500" />
+          {/* <div className="h-8 w-8 rounded-full bg-gradient-to-br from-zinc-100 to-zinc-500">          </div> */}
           <span className="text-sm tracking-[0.15em] uppercase text-zinc-300 font-[ebGaramond] font-bold">
             Eternal Bloom
           </span>

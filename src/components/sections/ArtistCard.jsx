@@ -58,7 +58,7 @@ function ArtistCard({ artist }) {
         </div>
 
         <button className="w-full rounded-full bg-zinc-50 py-2.5 text-sm font-medium text-zinc-500 transition-colors hover:text-zinc-300 hover:bg-zinc-200">
-          Book with {artist.name.split(' ')[0]}
+          View Portfolio
         </button>
       </div>
     </Link>

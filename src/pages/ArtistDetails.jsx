@@ -7,6 +7,8 @@ function ArtistDetails() {
   const artist = artistsData[artistId];
   const [selectedImage, setSelectedImage] = useState(null);
 
+  const isExternal = (url) => /^https?:\/\//i.test(url || "");
+
   if (!artist) {
     return (
       <div className="min-h-screen bg-black text-zinc-100 flex items-center justify-center">
@@ -96,7 +98,14 @@ function ArtistDetails() {
               {/* CTA Button */}
               <div>
                 <Link
-                  to={`/booking?artist=${encodeURIComponent(artist.name)}`}
+                  to={
+                    isExternal(artist.link)
+                      ? artist.link
+                      : `/booking?artist=${encodeURIComponent(artist.name)}`
+                  }
+                  {...(isExternal(artist.link)
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
                   className="block header-button w-full text-center rounded-full bg-zinc-500 py-3 text-sm font-medium text-zinc-500 hover:text-zinc-200 transition-colors hover:bg-zinc-200"
                 >
                   Book with {artist.name}

@@ -13,9 +13,9 @@ function Hero() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="https://images.pexels.com/photos/1102912/pexels-photo-1102912.jpeg" 
+            src="/images/site/lounge.jpg" 
             alt="Eternal Bloom Studio"
-            className="h-full w-full object-cover opacity-20" 
+            className="h-full w-full object-cover opacity-40" 
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/40 to-black" />
         </div>
