@@ -36,10 +36,10 @@ function Hero() {
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Link variant="primary" to="/booking" className="rounded-full bg-zinc-50 px-6 text-sm font-medium header-button transition-colors hover:bg-zinc-200">
+            <Link variant="primary" to="/eternal-bloom/booking" className="rounded-full bg-zinc-50 px-6 text-sm font-medium header-button transition-colors hover:bg-zinc-200">
             Book Consultation
           </Link>
-            <Link to="/artists">
+            <Link to="/eternal-bloom/artists">
               <Button variant="secondary">
                 View Artists
               </Button>
