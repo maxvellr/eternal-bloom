@@ -59,7 +59,7 @@ If you feel like I'm a good fit for your next tattoo project feel free to email 
     link: "https://venue.ink/@niemo_tattoo",
     portfolio: [
       "/eternal-bloom/images/niemo/1.jpg",
-      "/eternal-bloom/images/niemo/2.JPG",
+      "/eternal-bloom/images/niemo/2.jpg",
       "/eternal-bloom/images/niemo/3.jpg",
       "/eternal-bloom/images/niemo/4.jpg",
       "/eternal-bloom/images/niemo/5.jpg",
