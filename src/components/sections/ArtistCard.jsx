@@ -19,7 +19,7 @@ function ArtistCard({ artist }) {
           <h3 className="text-2xl font-semibold text-zinc-50 font-[Cardo]">
             {artist.name}
           </h3>
-          <p className="text-sm text-zinc-400 mt-1">{artist.specialty}</p>
+          {/* <p className="text-sm text-zinc-400 mt-1">{artist.specialty}</p> */}
         </div>
         
         <p className="text-sm leading-relaxed text-zinc-400 line-clamp-3">

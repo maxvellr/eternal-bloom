@@ -70,7 +70,7 @@ function Home() {
             Our Artists
           </h2>
           <p className="text-zinc-400 text-sm max-w-6xl mx-auto">
-            Each artist brings their own style and expertise. Browse their work and find the perfect match for your vision.
+            Each artist brings their own style and expertise.
           </p>
         </div>
 
@@ -111,10 +111,10 @@ function Home() {
 
               {/* Artist Info */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-zinc-50 font-[ebGaramond] mb-1">
+                <h3 className="text-xl font-semibold text-zinc-50 font-[ebGaramond] mb-4">
                   {artist.name}
                 </h3>
-                <p className="text-sm text-zinc-400 mb-3">{artist.specialty}</p>
+                {/* <p className="text-sm text-zinc-400 mb-3">{artist.specialty}</p> */}
                 
                 <div className="flex flex-wrap gap-2">
                   {artist.styles.slice(0, 2).map(style => (

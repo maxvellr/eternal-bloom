@@ -110,7 +110,7 @@ function FAQ() {
             <span className="font-[Cardo] italic text-zinc-300">Questions</span>
           </h1>
           <p className="mx-auto mt-6 max-w-6xl text-sm leading-relaxed text-zinc-400">
-            Everything you need to know before your first visit. Can't find what you're looking for? Reach out and we'll get back to you.
+            Everything you need to know before your first visit.
           </p>
         </div>
       </section>

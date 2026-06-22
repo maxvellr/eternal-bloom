@@ -17,7 +17,7 @@ function Artists() {
           <h1 className="mt-4 text-4xl font-semibold tracking-tight text-zinc-50 sm:text-5xl">
             Expert artists specializing in{' '}
             <span className="font-[Cardo] italic text-zinc-300">
-              darkwork & custom designs
+              custom designs
             </span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-zinc-400">

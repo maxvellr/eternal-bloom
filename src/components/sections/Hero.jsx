@@ -31,8 +31,8 @@ function Hero() {
           </h1>
           
           <p className="mx-auto mt-8 max-w-6xl text-base leading-relaxed text-zinc-300">
-            Eternal Bloom is a private studio focused on custom, clean work and a calm,
-            inclusive experience from first consult to final session.
+            Eternal Bloom is a private studio focused on clean, custom work and a calm,
+            inclusive experience.
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -48,10 +48,10 @@ function Hero() {
 
           {/* Quick Info */}
           <div className="mt-16 flex flex-wrap justify-center gap-8 text-sm">
-            <div className="text-center">
+            {/* <div className="text-center">
               <p className="font-medium text-zinc-300">Styles</p>
               <p className="text-zinc-400">Black & Gray · Neo-Traditional</p>
-            </div>
+            </div> */}
             <div className="text-center">
               <p className="font-medium text-zinc-300">Booking</p>
               <p className="text-zinc-400">Accepting new clients</p>
